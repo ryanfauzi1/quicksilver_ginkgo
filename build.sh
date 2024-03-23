@@ -23,7 +23,7 @@ function build_kernel() {
     echo -e "$yrllow << building kernel >> \n$white"
     echo -e "\n"
 
-    make -j$(nproc --all) O=out ARCH=arm64 fury-perf_defconfig
+    make -j$(nproc --all) O=out ARCH=arm64 vendor/ginkgo-perf_defconfig
     make -j$(nproc --all) ARCH=arm64 O=out \
                           CC=clang \
                           CROSS_COMPILE=aarch64-linux-gnu- \
