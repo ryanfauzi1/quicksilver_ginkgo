@@ -39,7 +39,7 @@ function build_kernel() {
                           CC=clang \
                           CROSS_COMPILE=aarch64-linux-gnu- \
                           CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
-                          CROSS_COMPILE_COMPAT=arm-linux-gnueabi Image.gz-dtb dtbo.img
+                          CROSS_COMPILE_COMPAT=arm-linux-gnueabi-
                           
     if [ -e "$KERN_IMG" ] || [ -e "$KERN_IMG2" ]; then
         echo -e "\n"
